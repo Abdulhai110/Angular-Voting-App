@@ -1,0 +1,116 @@
+<div  class="mainContainer">
+  <div class="child" *ngIf="candidate">
+    <table class="table table-success table-striped ">
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>City</td>
+          <td>Country Position</td>
+          <td>City Position</td>
+          <td>Action</td>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of appDataService.candidates; index as i">
+          <td>{{ item.name }}</td>
+          <td>{{ item.city }}</td>
+          <td>{{ item.countryPosition }}</td>
+          <td>{{ item.cityPosition }}</td>
+          <td>
+            <button (click)="deleteCandidate(item.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+          <button class="addBtn" (click)="candidate=false">Add</button>
+    </div>
+  </div>
+  <div class="child" *ngIf="!candidate">
+    <div class="addCand">
+      <form  (ngSubmit)="addCandidate()" [formGroup]="addCandidateForm">
+        <label >Candidate Name</label>
+        <input class="size" type="text" placeholder="Candidate Name" formControlName="candidateName">
+        <label >Candidate City</label>
+        <select class="size" formControlName="candidateCity" >
+          <option value="">Choose City </option>
+          <option *ngFor="let item of appDataService.cities" >{{item}}</option>
+        </select>
+        <label >Country Position</label>
+        <select class="size" formControlName="candiateCountryPosition" >
+          <option value="">Choose Country Position</option>
+          <option *ngFor="let item of appDataService.positions.country" >{{item.name}}</option>
+        </select>
+        <label >City Position</label>
+        <select class="size" formControlName="candiateCityPosition" >
+          <option value="">Choose City Position</option>
+          <option  *ngFor="let item of appDataService.positions.city" >{{item.name}}</option>
+        </select>
+        <div class="btn">
+          <button type="submit">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <h3>City</h3>
+<div class="addCityPosition">
+  <div>
+    <form action="" (ngSubmit)="addCityPosition()" [formGroup]="addCityPOsitionForm">
+      <input type="text" formControlName="cityPosition">
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+
+<div class="deleteCountryPosition">
+  <div>
+    <div *ngFor="let item of appDataService.positions.country; index as i;">
+      <ul>
+        <li>
+          <p>{{item.name}}</p>
+        </li>
+      </ul>
+      <button (click)="deleteCountryPosition(i)">Delete Position</button>
+    </div>
+  </div>
+</div>
+
+<div class="deleteCityPosition">
+  <div>
+    <div *ngFor="let item of appDataService.positions.city; index as i;">
+      <ul>
+        <li>
+          <p>{{item.name}}</p>
+        </li>
+      </ul>
+      <button (click)="deleteCityPosition(i)">Delete Position</button>
+    </div>
+  </div>
+</div>
+<h3>Country</h3>
+<div class="listOfCountry">
+  <div *ngFor="let item of appDataService.positions.country">
+    <ul>
+      <li>
+        <p>{{item.name}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<h3>Cities</h3>
+<div class="listOfCity">
+  <div *ngFor="let item of appDataService.positions.city">
+    <ul>
+      <li>
+        <p>{{item.name}}</p>
+      </li>
+    </ul>
+  </div>
+</div> -->

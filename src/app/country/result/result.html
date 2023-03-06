@@ -1,0 +1,106 @@
+<div *ngIf="this.countryService.closePolling">
+  <h1>Voting Still Continue...</h1>
+</div>
+<div class="main" *ngIf="!this.countryService.closePolling">
+  <div class="head">
+    <h1>Country Level Results</h1>
+  </div>
+  <hr />
+  <div class="country">
+    <h2 class="heading">Country Result</h2>
+    <div *ngIf="!this.countryService.closePolling" class="tableclass">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Country Position</th>
+            <th>Votes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of countryService.countryResult">
+            <td>{{item.name}}</td>
+            <td>{{item.countryPosition}}</td>
+            <td>{{item.vote}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr />
+  <div><h2>City Result</h2></div>
+  <div class="cityMain">
+    <div class="city">
+      <h3>City A</h3>
+      <div
+        *ngIf="Obj.keys(this.countryService.citiesResult[0].cityA).length>0"
+        class="tableclass"
+      >
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>City Position</th>
+              <th>Votes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of countryService.citiesResult[0].cityA">
+              <td>{{item.name}}</td>
+              <td>{{item.cityPosition}}</td>
+              <td>{{item.vote}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="city">
+      <h3>City B</h3>
+      <div
+        *ngIf="Obj.keys(this.countryService.citiesResult[1].cityB).length>0"
+        class="tableclass"
+      >
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>City Position</th>
+              <th>Votes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of countryService.citiesResult[1].cityB">
+              <td>{{item.name}}</td>
+              <td>{{item.cityPosition}}</td>
+              <td>{{item.vote}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="city">
+      <h3>City C</h3>
+      <div
+        *ngIf="Obj.keys(this.countryService.citiesResult[2].cityC).length>0"
+        class="tableclass"
+      >
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>City Position</th>
+              <th>Votes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of countryService.citiesResult[2].cityC">
+              <td>{{item.name}}</td>
+              <td>{{item.cityPosition}}</td>
+              <td>{{item.vote}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

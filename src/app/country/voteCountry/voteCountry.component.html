@@ -1,0 +1,42 @@
+<div class="main" *ngIf="!this.countryService.closePolling">
+  <h1>Voting Closed, Plz check Results</h1>
+  <!-- <div class="winner" *ngIf="!this.countryService.close">
+    <h2>
+      Winner :
+      {{
+        this.countryService.CountryWinner.name +
+          " | " +
+          this.countryService.CountryWinner.countryPosition +
+          " | " +
+          this.countryService.CountryWinner.vote
+      }}
+    </h2>
+  </div> -->
+</div>
+<div class="child" *ngIf="this.countryService.closePolling">
+  <h1 class="title">Country Voting</h1>
+
+  <div class="tablediv">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Country Position</th>
+          <th>Total Votes</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of countryService.countryResult;index as i">
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.countryPosition }}</td>
+          <td>{{ item.vote }}</td>
+          <td *ngIf="this.countryService.closePolling">
+            <button (click)="Vote(item.id)">Vote</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="addBtn" (click)="closePolling()">Close</button>
+</div>

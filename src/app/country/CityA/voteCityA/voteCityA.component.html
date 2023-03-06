@@ -1,0 +1,31 @@
+<div class="main" *ngIf="!this.cityAService.closePooling">
+  <h1>Voting Closed, Plz Check Results</h1>
+</div>
+<div class="child" *ngIf=" this.cityAService.closePooling">
+  <h1 class="title">City A Voting</h1>
+  <div class="tablediv">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>City Position</th>
+          <th>Total Votes</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of cityAService.cityAResult;index as i">
+        <tr>
+          <td>{{item.name}}</td>
+          <td>{{item.city}}</td>
+          <td>{{item.cityPosition}}</td>
+          <td>{{item.vote}}</td>
+          <td *ngIf=" this.cityAService.closePooling">
+            <button (click)="Vote(item.id)">Vote</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="addBtn" (click)="closePolling()">Close</button>
+</div>

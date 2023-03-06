@@ -1,0 +1,22 @@
+
+.main{
+  width: 100%;
+  text-align: center;
+}
+.main .country{
+  width: 50%;
+  margin: auto;
+}
+.cityMain{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cityMain .city{
+  width: 45%;
+}
+.city table{
+  width: 100%;
+}
+

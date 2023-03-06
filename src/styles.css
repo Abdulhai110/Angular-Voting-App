@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+}
+h1{
+  text-align: center;
+}
+.child{
+  width: 40%;
+  margin: auto;
+}
+.title{
+  background-color: #51ff5a;
+  text-align: center;
+}
+
+table {
+  background-color: #51ff5a;
+  width: 100%;
+  text-align: center;
+  border-spacing: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+
+td, th{
+  background-color: #fffdfb;
+  border-radius: 5px;
+  padding: 10px;
+}
+button {
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  background-color: #ff0000;
+}
+
+.addBtn{
+  width: 100%;
+  text-align: center;
+  background-color: rgb(0, 183, 255);
+}

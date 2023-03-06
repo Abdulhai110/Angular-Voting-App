@@ -1,0 +1,165 @@
+<!-- <h3>Country</h3>
+<div class="addCountryPosition">
+    <div>
+      <form action="" (ngSubmit)="addCountryPosition()" [formGroup]="addCountryPositionForm">
+        <input type="text" formControlName="countryPosition">
+        <button type="submit">Save</button>
+      </form>
+    </div>
+</div>
+<h3>City</h3>
+<div class="addCityPosition">
+  <div>
+    <form action="" (ngSubmit)="addCityPosition()" [formGroup]="addCityPOsitionForm">
+      <input type="text" formControlName="cityPosition">
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+
+<div class="deleteCountryPosition">
+  <div>
+    <div *ngFor="let item of appDataService.positions.country; index as i;">
+      <ul>
+        <li>
+          <p>{{item.name}}</p>
+        </li>
+      </ul>
+      <button (click)="deleteCountryPosition(item.name)">Delete Position</button>
+    </div>
+  </div>
+</div>
+
+<div class="deleteCityPosition">
+  <div>
+    <div *ngFor="let item of appDataService.positions.city; index as i;">
+      <ul>
+        <li>
+          <p>{{item.name}}</p>
+        </li>
+      </ul>
+      <button (click)="deleteCityPosition(item.name)">Delete Position</button>
+    </div>
+  </div>
+</div> -->
+<div class="mainDiv">
+  <div class="country">
+    <h3 class="title">Country</h3>
+    <div class="tableDiv" *ngIf="country">
+      <table>
+        <thead>
+          <tr>
+            <th>Position Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of this.appDataService.positions.country">
+            <td>{{ item.name }}</td>
+            <td>
+              <button class="dlt" (click)="deleteCountryPosition(item.name)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+            <button class="addBtn" (click)="add()">Add</button>
+      </div>
+    </div>
+
+    <div class="addCountryPosition" *ngIf="addCountryForm">
+      <div>
+        <form
+          (ngSubmit)="addCountryPosition()"
+          [formGroup]="addCountryPositionForm"
+        >
+          <label class="position">Position</label><br>
+          <input class="inpt" type="text" placeholder="Country Position.." formControlName="countryPosition" /><br />
+          <div class="btn"><button  type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="city">
+    <h3 class="title">City</h3>
+    <div class="tableDiv" *ngIf="city">
+      <table>
+        <thead>
+          <tr>
+            <th>Position Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of this.appDataService.positions.city">
+            <td>{{ item.name }}</td>
+            <td>
+              <button class="dlt" (click)="deleteCityPosition(item.name)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+            <button class="addBtn" (click)="city=false">Add</button>
+      </div>
+    </div>
+    <div class="addCityPosition" *ngIf="!city">
+      <div>
+        <form action="" (ngSubmit)="addCityPosition()" [formGroup]="addCityPOsitionForm">
+          <label class="position">Position</label><br>
+          <input class="inpt" type="text" placeholder="City Position.." formControlName="cityPosition">
+          <div class="btn" >
+            <button  type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <td>City Position</td>
+      <td><button>Add</button></td>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Action</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of appDataService.positions.city">
+      <td>{{item.name}}</td>
+      <td>{{item.name}}</td>
+    </tr>
+  </tbody>
+</table> -->
+<!-- <h3>Country</h3>
+<div class="listOfCountry">
+  <div *ngFor="let item of appDataService.positions.country">
+    <ul>
+      <li>
+        <p>{{item.name}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<h3>Cities</h3>
+<div class="listOfCity">
+  <div *ngFor="let item of appDataService.positions.city">
+    <ul>
+      <li>
+        <p>{{item.name}}</p>
+      </li>
+    </ul>
+  </div>
+</div> -->

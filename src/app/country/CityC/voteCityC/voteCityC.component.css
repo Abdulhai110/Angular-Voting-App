@@ -1,0 +1,41 @@
+/* table {
+  border-collapse: collapse;
+  background-color: gainsboro;
+  width: 100%;
+  text-align: center;
+  border-spacing: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+
+td, th{
+  background-color: #fffdfb;
+  border: 1px solid silver;
+  padding: 10px;
+}
+
+
+button {
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #ff0000;
+  color: white;
+}
+.addBtn{
+  width: 100%;
+  text-align: center;
+  background-color: rgb(0, 183, 255);
+}
+
+.child{
+  width: 40%;
+  margin: auto;
+  border: 1px solid;
+}
+.title{
+  background-color: #51ff5a;
+  text-align: center;
+} */

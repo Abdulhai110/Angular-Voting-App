@@ -1,0 +1,85 @@
+<div class="mainBody">
+  <h1 class="title">Voting-Application</h1>
+  <nav class="nav">
+    <ul>
+      <li
+        routerLink="position"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Position
+      </li>
+      <li
+        routerLink="candidate"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Candidate
+      </li>
+      <li
+        routerLink="country/vote"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Country
+      </li>
+      <li
+        routerLink="country/result"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Country Results
+      </li>
+      <li
+        routerLink="country/cityA/vote"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        City A Vote
+      </li>
+      <li
+        routerLink="country/cityA/result"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        City A Result
+      </li>
+      <li
+        routerLink="country/cityB/vote"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        City B Vote
+      </li>
+      <li
+        routerLink="country/cityB/result"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        City B Result
+      </li>
+      <li
+        routerLink="country/cityC/vote"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        City C Vote
+      </li>
+      <li
+        routerLink="country/cityC/result"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        City C Result
+      </li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="fotter">
+    <p>@Optimus CodeGenio</p>
+    <p>Voting-Application Version 1.0</p>
+  </div>
+</div>
