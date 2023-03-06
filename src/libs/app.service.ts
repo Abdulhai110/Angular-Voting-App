@@ -5,7 +5,7 @@ export class AppDataService{
   candidates = [
     {
       id:1,
-      name: 'Jack Mack',
+      name: 'Hadi Haider',
       city: 'CityA',
       countryPosition: 'President',
       cityPosition: 'Magistrate',
@@ -13,7 +13,7 @@ export class AppDataService{
     },
     {
       id:2,
-      name: 'Steve Rogers',
+      name: 'Mehdi Raza',
       city: 'CityB',
       countryPosition: 'Vice President',
       cityPosition: 'Mayor',
@@ -21,7 +21,7 @@ export class AppDataService{
     },
     {
       id:3,
-      name: 'James Arthur',
+      name: 'Imran Khan',
       city: 'CityC',
       countryPosition: 'President',
       cityPosition: 'Mayor',
